@@ -33,6 +33,22 @@ android {
 
 }
 
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.vtn-dev-ajay'
+                artifactId = 'CustomToasty'
+                version = '2.0.0'
+            }
+        }
+    }
+}
+
+
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
